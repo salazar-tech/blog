@@ -1,0 +1,18 @@
+#!/bin/bash
+# 1. Generate the initial files
+docker run --rm \
+  -v "$(pwd):/srv/jekyll" \
+  -w /srv/jekyll \
+  jekyll/jekyll:latest \
+  jekyll new . --force --skip-bundle
+
+# 2. Add webrick to the newly created Gemfile
+echo 'gem "webrick"' >> Gemfile
+echo 'Gemfile.lock' >> .gitignore
+
+# 3. Build and generate Gemfile.lock
+docker run --rm \
+  -v "$(pwd):/srv/jekyll" \
+  -w /srv/jekyll \
+  jekyll/jekyll:latest \
+  jekyll build
