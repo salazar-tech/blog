@@ -20,7 +20,7 @@
 
 title: Salazar Technology Consulting
 author:
-  name: Joel Salazar
+  name: Salazar Technology Consulting
   email: joel@salazartech.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog providing the essential technology articles every small business owner needs to grow.
@@ -37,12 +37,16 @@ plugins:
 minima:
   skin: auto
   social_links:
-    - title: Jekyll repository at GitHub
+    - title: GitHub
       icon: github
-      url: "https://github.com/jekyll/jekyll"
-    - title: Jekyll at X (formerly Twitter)
-      icon: x-twitter
-      url: "https://x.com/jekyllrb"
+      url: "https://github.com/salazar-tech"
+    - title: Youtube
+      icon: youtube
+      url: "https://www.youtube.com/@salazartech-com"
+    - title: Linkedin
+      icon: linkedin
+      url: "https://linkedin.com/in/salazartech"
+    
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
