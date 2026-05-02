@@ -1,7 +1,10 @@
 <header class="site-header">
   <div class="wrapper">
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-      <img src="{{ 'assets/logo_blog.svg' | relative_url }}" alt="{{ site.title | escape }}" height="28">
+      <picture>
+        <source srcset="{{ 'assets/logo_blog_white.svg' | relative_url }}" media="(prefers-color-scheme: dark)">
+        <img src="{{ 'assets/logo_blog.svg' | relative_url }}" alt="{{ site.title | escape }}" height="28">
+      </picture>
     </a>
   </div>
 </header>
