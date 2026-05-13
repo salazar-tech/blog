@@ -1,3 +1,14 @@
 .social-media-list li:has(a[title="Subscribe to syndication feed"]) {
-    display: none;
+  display: none;
+}
+
+/* Material Design 3 Typography */
+h2 {
+  font-size: 1.5rem !important;
+  /* Maps to Headline Large */
+}
+
+h3 {
+  font-size: 1.25rem;
+  /* Maps to Headline Medium */
 }
