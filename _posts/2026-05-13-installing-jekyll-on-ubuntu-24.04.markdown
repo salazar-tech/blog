@@ -3,40 +3,33 @@ layout: post
 title: "Installing Jekyll on Ubuntu 24.04"
 tag: information-technology
 ---
-Installing Jekyll on Ubuntu 24.04 requires setting up the Ruby environment first. Since Ubuntu 24.04 is a Long Term Support (LTS) release, it’s best to install through the official repositories for stability.
-
-## Update System Packages
-Ensure your package database is current:
-
+Setting up Jekyll is the first step toward launching your professional website. We will start by installing Ruby, the engine that makes Jekyll run. Because Ubuntu 24.04 is a stable system, this process is straightforward and reliable.
+### 1. Refresh Your System
+First, let's make sure your computer’s software list is up to date. This ensures everything installs smoothly.
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
-## Install Ruby and Dependencies
-Jekyll requires Ruby and several development tools to compile "native extensions" (software written in C that Ruby uses).
-
+### 2. Install the Core Tools
+Jekyll needs Ruby and a few "behind-the-scenes" tools to help it build your site. Think of these as the essential ingredients.
 ```bash
 sudo apt install ruby-full build-essential zlib1g-dev
 ```
-## Configure the Ruby Gem Path
-To avoid using sudo every time you install a Ruby gem (which is a security best practice), configure a local "gems" directory in your home folder.
-
-Add these lines to your .bashrc file:
-
+### 3. Set Up Your Personal Folder
+To keep your system secure and organized, we’ll tell your computer to save website tools in a personal folder rather than a restricted system area.
+Run these commands to update your settings:
 ```bash
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
-## Install Jekyll and Bundler
-Now that your environment is set up, install Jekyll and Bundler (which manages project-specific dependencies):
-
+### 4. Install Jekyll and Bundler
+Now you are ready to install Jekyll itself, along with Bundler (a tool that helps manage your website's specific features).
 ```bash
 gem install jekyll bundler
 ```
-## Verify Installation
-Check that Jekyll is installed and accessible:
-
+### 5. Check Your Work
+Finally, let's verify that everything is ready for you to start building. Run this command to see your Jekyll version:
 ```bash
 jekyll -v
 ```
